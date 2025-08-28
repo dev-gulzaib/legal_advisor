@@ -10,7 +10,7 @@
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
@@ -29,6 +29,49 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .logo-slider-wrapper {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            padding: 20px 0;
+            margin-top: 30px;
+            background: #fff;
+            /* Optional */
+        }
+
+        .logo-slider {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            animation: scroll-left 30s linear infinite;
+        }
+
+        .logo-slider img {
+            max-height: 80px;
+            max-width: 130px;
+            object-fit: contain;
+            width: 100%;
+            height: auto;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Duplicate content for seamless loop */
+        .logo-track {
+            display: flex;
+            gap: 40px;
+        }
+    </style>
 </head>
 
 <body>
@@ -52,7 +95,7 @@
                         </div>
                         <div class="h-100 d-inline-flex align-items-center py-2 px-2">
                             <i class="fa fa-phone-alt text-primary mr-2"></i>
-                            <small>(051) 2266461/362 & (042) 36285757</small>
+                            <small>(051) 2266361/362 & (042) 36285757</small>
                         </div>
                         <div class="h-100 d-inline-flex align-items-center py-2 px-2">
                             <i class="fa fa-phone-alt text-primary mr-2"></i>
@@ -92,7 +135,7 @@
                             <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
                             <a href="service.html" class="nav-item nav-link">Practice</a>
-                            
+
                             <a href="team.html" class="nav-item nav-link">Our Team</a>
                             <a href="careers.html" class="nav-item nav-link">Careers</a>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -680,7 +723,7 @@
                 partners have decades of experience in representing high-profile clients before the Supreme Court, High
                 Courts, and regulatory bodies.
             </p>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-12">
                     <div style="gap: 30px;" class="row justify-content-center align-items-center mt-4">
                         <div class="col-6 col-sm-3 col-md-2 mb-4 text-center">
@@ -701,7 +744,42 @@
                         </div>
                     </div>
                 </div>
+            </div> -->
+
+            <div class="logo-slider-wrapper">
+                <div class="logo-slider">
+                    <div class="logo-track">
+                        <img src="img/clients/ZKB.png" alt="Client 1">
+                        <img src="img/clients/zong_logo.svg" alt="Client 2">
+                        <img src="img/clients/sui.png" alt="Client 3">
+                        <img src="img/clients/mari.png" alt="Client 4">
+                        <img src="img/clients/attock cemit.png" alt="Client 5">
+                        <img src="img/clients/attock oil.png" alt="Client 6">
+                        <img src="img/clients/capital smart.png" alt="Client 7">
+                        <img src="img/clients/cda.jpeg" alt="Client 8">
+                        <img src="img/clients/golden.jpg" alt="Client 9">
+                        <img src="img/clients/habib.png" alt="Client 10">
+                        <img src="img/clients/HHL Logo.jpg" alt="Client 11">
+                        <img src="img/clients/hum.png" alt="Client 12">
+                        <img src="img/clients/kasib.png" alt="Client 13">
+                        <img src="img/clients/kohatcement.png" alt="Client 14">
+                        <img src="img/clients/lda.jpeg" alt="Client 15">
+                        <img src="img/clients/mpcl.png" alt="Client 16">
+                        <img src="img/clients/mutaza.png" alt="Client 17">
+                        <img src="img/clients/nab.jpeg" alt="Client 18">
+                        <img src="img/clients/nbp.jpeg" alt="Client 19">
+                        <img src="img/clients/ogdcl.jpeg" alt="Client 20">
+                        <img src="img/clients/pak oil.jpeg" alt="Client 21">
+                        <img src="img/clients/pia.svg" alt="Client 22">
+                        <img src="img/clients/psl.png" alt="Client 23">
+                        <img src="img/clients/rda.jpeg" alt="Client 24">
+                        <img src="img/clients/top city.png" alt="Client 25">
+                        <img src="img/clients/zkb.jpeg" alt="Client 26">
+                        <img src="img/clients/zkb.jpg" alt="Client 27">
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
     <!-- Team End -->
@@ -713,7 +791,7 @@
                 <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
                     <i class="fa fa-2x fa-map-marker-alt text-primary"></i>
                     <div class="ml-3">
-                        <h5 class="text-white">Our Office</h5>
+                        <h5 class="text-white">Our Offices</h5>
                         <p class="m-0">House 15A, Street 48/61, Sector F-8/4, Islamabad</p>
                         <p class="m-0">3rd floor, Imtiaz plaza, 87, The Mall, Lahore</p>
                     </div>
@@ -734,7 +812,7 @@
                     <i class="fa fa-2x fa-phone-alt text-primary"></i>
                     <div class="ml-3">
                         <h5 class="text-white">Call Us</h5>
-                        <p class="m-0">(051) 2266461/362</p>
+                        <p class="m-0">(051) 2266361/362</p>
                         <p class="m-0">(042) 36285757</p>
                     </div>
                 </div>
@@ -756,9 +834,9 @@
                     <!-- <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a> -->
                 </div>
             </div>
-           
-           
-            
+
+
+
         </div>
         <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
             <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
