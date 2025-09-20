@@ -132,28 +132,29 @@
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="contact-form">
                         <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <form method="POST" action="send_email.php">
                             <div class="form-row">
                                 <div class="col-sm-6 control-group">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
-                                        required="required" data-validation-required-message="Please enter your name" />
+                                    <input type="text" class="form-control p-4" id="name" name="name"
+                                        placeholder="Your Name" required="required"
+                                        data-validation-required-message="Please enter your name" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="col-sm-6 control-group">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
-                                        required="required"
+                                    <input type="email" class="form-control p-4" id="email" name="email"
+                                        placeholder="Your Email" required="required"
                                         data-validation-required-message="Please enter your email" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="control-group">
-                                <input type="text" class="form-control p-4" id="location" placeholder="Full Location"
-                                    required="required"
+                                <input type="text" class="form-control p-4" id="location" name="location"
+                                    placeholder="Full Location" required="required"
                                     data-validation-required-message="Please enter a full location" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <textarea class="form-control p-4" rows="6" id="message"
+                                <textarea class="form-control p-4" rows="6" id="message" name="message"
                                     placeholder="Tell us a little bit about your Problem" required="required"
                                     data-validation-required-message="Please enter your message"></textarea>
                                 <p class="help-block text-danger"></p>
@@ -163,6 +164,7 @@
                                     Message</button>
                             </div>
                         </form>
+
                     </div>
                 </div>
                 <div class="col-lg-6" style="min-height: 400px;">
@@ -246,6 +248,25 @@
     </div>
     <!-- Footer End -->
 
+    <!-- Appointment Success Model Start -->
+    <div class="modal fade" id="appointmentSuccessModal" tabindex="-1" aria-labelledby="successModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-header text-white" style="background-color: #59000A;">
+                    <h5 class="modal-title" id="successModalLabel" style="color: white;">🎉 Appointment Sent!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Thank you for booking. We'll get back to you soon!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Send Model End -->
+
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
@@ -267,6 +288,19 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <!-- Appointment Success Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('appointment') === 'success') {
+                console.log("Success param found, showing modal"); // ✅ Debug log
+                const successModal = new bootstrap.Modal(document.getElementById('appointmentSuccessModal'));
+                successModal.show();
+            }
+        });
+    </script>
 </body>
 
 </html>
